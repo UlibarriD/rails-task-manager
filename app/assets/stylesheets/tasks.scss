@@ -1,0 +1,21 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+i{
+  margin-right: 8px;
+}
+li{
+  margin-bottom: 8px;
+}
+body{
+  font-family: sans-serif;
+}
+.card{
+  border: 1px solid gray;
+  padding: 8px;
+  background: #f7f6f4;
+}

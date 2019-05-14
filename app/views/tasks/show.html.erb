@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<div class="card">
+  <p><%= @task.details %></p>
+</div>
+<% if @task.completed == false %>
+  <p><i class="far fa-square"></i>This task is not completed yet.</p>
+<% else %>
+  <p><i class="far fa-check-square"></i>This task is completed.</p>
+<% end %>
+<%= link_to("Edit this task", "/tasks/#{@task.id}/edit") %>
+<%= link_to("Back to list", "/tasks") %>
