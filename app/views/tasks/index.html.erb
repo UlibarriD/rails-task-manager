@@ -1,13 +1,19 @@
-<h1>My Tasks</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <% if task.completed == false %>
-      <li><i class="far fa-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li>
-    <% else %>
-      <li><i class="far fa-check-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li></li>
-    <% end %>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>My Tasks</h1>
+  <div class="task_list">
+    <ul>
+      <% @tasks.each do |task| %>
+        <% if task.completed == false %>
+          <li><i class="far fa-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li>
+        <% else %>
+          <li><i class="far fa-check-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to("<i class='fas fa-plus-circle'></i> Add a new task".html_safe, "/tasks/new", class: "btn btn-outline-dark") %>
+</div>
 
-<%= link_to("Add a new task", "/tasks/new") %>
+
+
 
