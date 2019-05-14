@@ -2,9 +2,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <% if task.completed == false %>
-      <li><i class="far fa-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %></li>
+      <li><i class="far fa-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li>
     <% else %>
-      <li><i class="far fa-check-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %></li>
+      <li><i class="far fa-check-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li></li>
     <% end %>
   <% end %>
 </ul>
