@@ -1,0 +1,40 @@
+.tasks{
+  list-style-type: none;
+  padding: 0;
+
+  i {
+    margin: 0 8px;
+  }
+  p {
+    margin-bottom: 8px;
+    border-bottom: 3px solid #efeeec;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: black;
+    }
+    a:hover {
+      color: gray;
+      text-decoration: none;
+    }
+  }
+}
+.profile-bar{
+  background-color: #46529d;
+  height: 100vh;
+  color: white;
+}
+.tasks-bar{
+  max-height: 100vh;
+}
+.index-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: 900px) {
+    grid-template-columns: 2fr 4fr;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 2fr 4fr;
+  }
+}

@@ -1,19 +1,52 @@
-<div class="container">
-  <h1>My Tasks</h1>
-  <div class="task_list">
-    <ul>
+<div class="index-container">
+
+  <div class="profile-bar">
+    <h1>Date</h1>
+
+    <%= link_to("<i class='fas fa-plus-circle'></i> Add a new task".html_safe, "/tasks/new", class: "btn btn-success") %>
+  </div>
+
+  <div class="tasks-bar">
+
+    <div class="tasks">
       <% @tasks.each do |task| %>
         <% if task.completed == false %>
-          <li><i class="far fa-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li>
+
+          <p> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>
+
         <% else %>
-          <li><i class="far fa-check-square"></i> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></li></li>
+          <p><%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>
         <% end %>
       <% end %>
-    </ul>
+    </div>
+
   </div>
-  <%= link_to("<i class='fas fa-plus-circle'></i> Add a new task".html_safe, "/tasks/new", class: "btn btn-outline-dark") %>
+
 </div>
 
+<!--
+<div class="subNavbar">
+  <div class="subNavbar-links subnavbar-show">
+    <ul class="nav subNavbar-links subnavbar-show" id="myTab" role="tablist">
+      <li>
+        <a class="subNavbarLink active" data-toggle="tab" href="#description" role="tab">Description</a>
+      </li>
+      <li>
+        <a class="subNavbarLink" data-toggle="tab" href="#technical-details" role="tab">Technical Details</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
+<div class="tab-content" id="myTabContent">
 
+  <div id="description" class="tab-pane fade show active" role="tabpanel">
+    <p>hi</p>
+  </div>
 
+  <div id="technical-details" class="tab-pane fade show" role="tabpanel">
+    <p>Level:</p>
+  </div>
+
+</div>
+ -->
