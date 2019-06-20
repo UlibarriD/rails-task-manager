@@ -22,18 +22,20 @@
 }
 .profile-bar{
   background-color: #46529d;
-  height: 100vh;
+  height: 35vh;
   color: white;
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
 }
 .tasks-bar{
-  max-height: 100vh;
+  @media (min-width: 992px) {
+    max-height: 100vh;
+  }
 }
 .index-container {
   display: grid;
   grid-template-columns: 1fr;
-  @media (min-width: 900px) {
-    grid-template-columns: 2fr 4fr;
-  }
   @media (min-width: 992px) {
     grid-template-columns: 2fr 4fr;
   }
