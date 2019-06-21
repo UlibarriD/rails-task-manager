@@ -9,10 +9,11 @@
   <div class="tasks-bar">
 
     <div class="tasks">
-      <% @tasks.each do |task| %>
+      <% @tasks.each do |task|%>
         <% if task.completed == false %>
 
           <p> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>
+          <p> <%= task.details unless task.details == "" %></p>
 
         <% else %>
           <p><%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>

@@ -13,9 +13,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    new_task = Task.new(allowed_params)
-    new_task.save
-    redirect_to '/tasks'
+    @new_task = Task.new(allowed_params)
+    @new_task.save
+    redirect_to tasks_path
   end
 
   def edit
