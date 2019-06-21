@@ -11,12 +11,34 @@
     <div class="tasks">
       <% @tasks.each do |task|%>
         <% if task.completed == false %>
+          <div class="title-content">
 
-          <p> <%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>
-          <p> <%= task.details unless task.details == "" %></p>
+            <h3><%= task.title %></h3>
+
+            <div class="btn-group dropleft">
+              <button style=" color: black; background: white; border: none;" type="button" class="btn btn-warning drop-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class='fas fa-ellipsis-v'></i>
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%= link_to "Delete", task, method: "delete", class: "dropdown-item" %>
+                <%= link_to "Edit this task", edit_task_path(task), class: "dropdown-item" %>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <p><strong>Details:</strong><br> <%= task.details %> </p>
+
+
+
 
         <% else %>
-          <p><%= link_to("#{task.title}", "/tasks/#{task.id}") %> <%= link_to("<i class='fas fa-trash'></i>".html_safe, "tasks/#{task.id}", method: "delete") %></p>
+          <h4><%= link_to task.title, task %> <%= link_to "<i class='fas fa-ellipsis-v'></i>".html_safe, task, method: "delete" %></h4>
+
+          <p> <strong>Details:</strong><br><%= task.details %> </p>
         <% end %>
       <% end %>
     </div>
@@ -24,6 +46,7 @@
   </div>
 
 </div>
+
 
 <!--
 <div class="subNavbar">

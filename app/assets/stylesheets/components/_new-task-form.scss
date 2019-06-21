@@ -1,8 +1,12 @@
 .form-container{
   width: 500px;
-  border: 1px solid #efeeec;
+  border: 2px solid #efeeec;
+  border-radius: 10px;
   padding: 16px;
   margin: 16px auto;
+  h1 {
+    text-align: center;
+  }
 }
 .new-cont{
   height: 100vh;

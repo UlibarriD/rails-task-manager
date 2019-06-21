@@ -7,18 +7,20 @@
   }
   p {
     margin-bottom: 8px;
-    border-bottom: 3px solid #efeeec;
-    display: flex;
-    justify-content: space-between;
-
-    a {
-      color: black;
-    }
-    a:hover {
-      color: gray;
-      text-decoration: none;
-    }
+    background-color: #efeeec;
+    padding: 8px;
   }
+  h3 {
+    margin-top: 3px;
+    margin-left: 16px;
+    font-weight: bold;
+  }
+}
+.title-content{
+  margin-top: 8px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 .profile-bar{
   background-color: #46529d;
@@ -44,3 +46,5 @@
     grid-template-columns: 2fr 4fr;
   }
 }
+
+
