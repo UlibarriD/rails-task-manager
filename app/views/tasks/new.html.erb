@@ -1,17 +1,17 @@
-<div class="container">
-  <h1>Add a new task</h1>
-  <%= form_for(@task) do |f| %>
-    <div class="form-group">
-        <%= f.label :title %> <br>
-        <%= f.text_field :title, class: "form-control" %>
-    </div>
-    <div class="form-group">
-        <%= f.label :details %> <br>
-        <%= f.text_field :details, class: "form-control" %>
-    </div>
-    <%= f.submit "Create!", class: "btn btn-outline-danger"  %>
-  <% end %>
-  <%= link_to("Back to list", '/tasks', class: "btn btn-outline-dark") %>
+<div class="new-cont">
+  <div class="form-container">
+    <h1>Add a new task</h1>
+    <%= form_for(@task) do |f| %>
+      <div class="form-group">
+          <%= f.label :title %> <br>
+          <%= f.text_field :title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+          <%= f.label :details %> <br>
+          <%= f.text_field :details, class: "form-control" %>
+      </div>
+      <%= f.submit "Create", class: "btn btn-success btn-block"  %>
+    <% end %>
+    <%= link_to("Back to list", '/tasks', class: "btn btn-outline-dark") %>
+  </div>
 </div>
-
-

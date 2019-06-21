@@ -24,6 +24,10 @@
   background-color: #46529d;
   height: 35vh;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   @media (min-width: 992px) {
     height: 100vh;
   }

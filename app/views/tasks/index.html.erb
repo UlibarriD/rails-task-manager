@@ -1,7 +1,7 @@
 <div class="index-container">
 
   <div class="profile-bar">
-    <h1>Date</h1>
+    <h1><%= Date.strptime(Time.now.to_s , "%Y-%m-%d %H:%M:%S %Z").strftime("%m/%d/%Y") %></h1>
 
     <%= link_to("<i class='fas fa-plus-circle'></i> Add a new task".html_safe, "/tasks/new", class: "btn btn-success") %>
   </div>
